@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-export AKKACRAWER_WORKER_PORT=9983
+export AC_WORKER_PORT=9983
 
-export AKKACRAWER_WORKER_HOST=localhost
+export AC_WORKER_HOST=spark82
 
-export AKKACRAWER_MASTER_PORT=9984
+export AC_MASTER_PORT=9984
 
-export AKKACRAWER_MASTER_HOST=localhost
+export AC_MASTER_HOST=spark83
