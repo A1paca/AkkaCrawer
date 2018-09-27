@@ -4,16 +4,6 @@ import scala.collection.mutable
 
 trait RemoteMessage extends Serializable {}
 
-//注册client
-case class RegisterClient(var clientId: String,var clientHost: String, var clientPort: String) extends RemoteMessage
-
-//成功注册client
-
-case class RegisteredClient() extends RemoteMessage
-
-//注册失败client
-case class RegisterClienFasle() extends RemoteMessage
-
 //注册worker
 case class RegisterWorker(var workerId: String, var workerHost: String, var workerPort: String) extends RemoteMessage
 
