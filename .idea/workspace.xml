@@ -1,30 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="983916c6-73a4-4285-8625-d94658a30334" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__com_typesafe_scala_logging_scala_logging_2_11_3_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_yetus_audience_annotations_0_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_lz4_lz4_java_1_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_11_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_8_0_beta2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/KafkaProducerUtils.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__log4j_log4j_1_2_14.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__net_jpountz_lz4_lz4_1_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_scala_lang_modules_scala_parser_combinators_2_11_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_scala_lang_modules_scala_xml_2_11_1_0_2.xml" afterPath="" />
+    <list default="true" id="983916c6-73a4-4285-8625-d94658a30334" name="Default" comment="2018/09/28">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/AkkaCrawer.iml" afterPath="$PROJECT_DIR$/../AkkaCrawer/AkkaCrawer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/pom.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__com_101tec_zkclient_0_3.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__com_101tec_zkclient_0_10.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_kafka_kafka_2_11_0_8_2_1.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_kafka_kafka_2_11_2_0_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_kafka_kafka_clients_0_8_2_1.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_kafka_kafka_clients_2_0_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_2.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_1_6.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_7_1.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/../AkkaCrawer/out/" />
     <ignored path="$PROJECT_DIR$/../AkkaCrawer/target/" />
@@ -62,8 +40,8 @@
       <file leaf-file-name="KafkaProducerUtils.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/KafkaProducerUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="576">
+              <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding>
                 <element signature="e#30#57#0" expanded="true" />
               </folding>
@@ -560,7 +538,7 @@
       <workItem from="1539684280900" duration="4089000" />
       <workItem from="1539769850407" duration="2926000" />
       <workItem from="1539780163115" duration="599000" />
-      <workItem from="1539857292966" duration="6716000" />
+      <workItem from="1539857292966" duration="6840000" />
     </task>
     <task id="LOCAL-00001" summary="2018/09/27">
       <created>1538028729996</created>
@@ -611,11 +589,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539859545530</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2018/09/28">
+      <created>1539870883352</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1539870883352</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49143000" />
+    <option name="totallyTimeSpent" value="49267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -987,8 +972,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/KafkaProducerUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="576">
+          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
             <element signature="e#30#57#0" expanded="true" />
           </folding>
