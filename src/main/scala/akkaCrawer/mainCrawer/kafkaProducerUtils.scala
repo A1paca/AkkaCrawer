@@ -13,9 +13,9 @@ object kafkaProducerUtils {
     * @param brokerList：broker地址
     */
   def kafkaUploadData(brokerList:String, topic:String, jobMap: ConcurrentHashMap[String, String]): Unit ={
-    def BROKER_LIST = topic
-    def TOPIC = brokerList
-    println("开始产生消息！")
+    def BROKER_LIST = brokerList
+    def TOPIC = topic
+    println("开始产生消息")
     val props = new Properties()
     props.put("metadata.broker.list", BROKER_LIST)
     props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, BROKER_LIST)
@@ -25,9 +25,10 @@ object kafkaProducerUtils {
     val producer = new KafkaProducer[String, String](props)
 
     for (entry <- jobMap.entrySet) {
-      //producer.send(new ProducerRecord(TOPIC, entry.getKey, entry.getValue))
-      println("Key = " + entry.getKey + ", Value = " + entry.getValue)
+      producer.send(new ProducerRecord(TOPIC, entry.getKey, entry.getValue))
+      println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
     }
     producer.close
+    println("数据生产完毕")
   }
 }

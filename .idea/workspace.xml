@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="983916c6-73a4-4285-8625-d94658a30334" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_slf4j_slf4j_nop_1_7_24.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/AkkaCrawer.iml" afterPath="$PROJECT_DIR$/../AkkaCrawer/AkkaCrawer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/pom.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/KafkaProducerUtils.scala" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/../AkkaCrawer/out/" />
     <ignored path="$PROJECT_DIR$/../AkkaCrawer/target/" />
@@ -24,18 +20,18 @@
       <file leaf-file-name="kafkaProducerUtils.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+            <state relative-caret-position="547">
+              <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FiveOneCrawer.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FiveOneCrawer.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="69" column="30" lean-forward="false" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+            <state relative-caret-position="1003">
+              <caret line="71" column="24" lean-forward="false" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
               <folding>
                 <element signature="e#31#65#0" expanded="true" />
               </folding>
@@ -43,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kafkaTest1.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="kafkaTest1.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+            <state relative-caret-position="432">
+              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding>
                 <element signature="e#30#57#0" expanded="true" />
               </folding>
@@ -103,10 +99,10 @@
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/kafkaUtils/utilForKafka.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/pom.xml" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/KafkaProducerUtils.scala" />
-        <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" />
-        <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala" />
+        <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" />
+        <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" />
       </list>
     </option>
   </component>
@@ -532,7 +528,7 @@
       <workItem from="1550904863608" duration="673000" />
       <workItem from="1551163975896" duration="4320000" />
       <workItem from="1551618664264" duration="1051000" />
-      <workItem from="1551663591849" duration="10388000" />
+      <workItem from="1551663591849" duration="10777000" />
     </task>
     <task id="LOCAL-00001" summary="2018/09/27">
       <created>1538028729996</created>
@@ -604,11 +600,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548579112897</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="2019年3月4日12:51:27">
+      <created>1551675098322</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1551675098322</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72380000" />
+    <option name="totallyTimeSpent" value="72769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -711,7 +714,8 @@
     <MESSAGE value="2018/09/28" />
     <MESSAGE value="2018/10/18" />
     <MESSAGE value="2019年1月27日16:51:35" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019年1月27日16:51:35" />
+    <MESSAGE value="2019年3月4日12:51:27" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019年3月4日12:51:27" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -963,30 +967,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="e#30#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        <state relative-caret-position="547">
+          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="69" column="30" lean-forward="false" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+        <state relative-caret-position="1003">
+          <caret line="71" column="24" lean-forward="false" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
           <folding>
             <element signature="e#31#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding>
-            <element signature="e#30#57#0" expanded="true" />
           </folding>
         </state>
       </provider>

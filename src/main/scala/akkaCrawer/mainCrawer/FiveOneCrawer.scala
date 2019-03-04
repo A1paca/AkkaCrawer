@@ -69,6 +69,7 @@ object FiveOneCrawer{
     // 利用并发集合多线程同步抓取:遍历所有页
     loopPar.foreach(i => requestGetUrl()(url.format(URLEncoder.encode(jobTag, "UTF-8"), i), jobMap))
     //输出格式
+    println("爬取完毕，正在上传数据")
     kafkaProducerUtils.kafkaUploadData("spark82:9092",jobTag,jobMap)
 
   }
