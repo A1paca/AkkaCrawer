@@ -5,10 +5,9 @@ import java.util.Properties
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, ProducerRecord, RecordMetadata}
 import org.apache.kafka.common.serialization.StringSerializer
 
-object KafkaProducerUtils {
-
+object kafkaTest1{
   def BROKER_LIST = "spark82:9092"
-  def TOPIC = "kafka_test_4"
+  def TOPIC = "kafka_test_3"
 
   def main(args: Array[String]): Unit = {
     println("开始产生消息！")
@@ -23,6 +22,7 @@ object KafkaProducerUtils {
     while(true){
       for (i <- 0 to 10) {
         producer.send(new ProducerRecord(TOPIC, "key-" + i, "msg-" + i))
+        println(i)
       }
       Thread.sleep(3000)
     }
@@ -30,3 +30,4 @@ object KafkaProducerUtils {
   }
 
 }
+
