@@ -1,4 +1,4 @@
-package akkaCrawer.deploy
+package akkaCrawer.deployAkka
 
 class WorkerInfo(var workerId: String, var workerHost: String, var workerPort: String) {
 

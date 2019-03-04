@@ -1,4 +1,4 @@
-package akkaCrawer.deploy
+package akkaCrawer.deployAkka
 
 import akka.actor.{Actor, ActorSystem, Props}
 import com.typesafe.config.ConfigFactory

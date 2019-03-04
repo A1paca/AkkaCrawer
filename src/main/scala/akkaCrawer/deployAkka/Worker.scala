@@ -1,4 +1,4 @@
-package akkaCrawer.deploy
+package akkaCrawer.deployAkka
 
 import java.util.UUID
 
