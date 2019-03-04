@@ -66,7 +66,10 @@ object LiePinCrawer{
     // 利用并发集合多线程同步抓取:遍历所有页
     loopPar.foreach(i => requestGetUrl()(url.format(URLEncoder.encode(jobTag, "UTF-8"), 20 * i), jobMap))
     //输出格式
-    println(jobMap)
+    for (entry <- jobMap.entrySet) {
+
+      println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
+    }
 
   }
 
@@ -84,5 +87,9 @@ object LiePinCrawer{
     concurrentCrawler(URL, jobTag, page, threadNum, new ConcurrentHashMap[String, String]())
     val t2 = System.currentTimeMillis
     println(s"抓取数：$sum  重试数：$fail  耗时(秒)：" + (t2 - t1) / 1000)
+  }
+//测试
+  def main(args: Array[String]): Unit = {
+    startCrawler("java",4)
   }
 }

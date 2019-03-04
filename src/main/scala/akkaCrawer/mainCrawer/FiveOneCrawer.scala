@@ -89,8 +89,8 @@ object FiveOneCrawer{
     val t2 = System.currentTimeMillis
     println(s"抓取数：$sum  重试数：$fail  耗时(秒)：" + (t2 - t1) / 1000)
   }
-
+//测试
   def main(args: Array[String]): Unit = {
-    startCrawler("java",7)
+    startCrawler("java",2)
   }
 }
