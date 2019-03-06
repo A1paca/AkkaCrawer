@@ -8,7 +8,7 @@ import org.apache.kafka.common.serialization.StringSerializer
 
 object kafkaProducerUtils {
   /**
-    * 此方法用于上传数据
+    * 此方法用于将Akka作为生产者上传数据
     * @param topic:topic名称
     * @param brokerList：broker地址
     */
@@ -17,13 +17,14 @@ object kafkaProducerUtils {
     def TOPIC = topic
     println("开始产生消息")
     val props = new Properties()
+    //配置Producer的配置
     props.put("metadata.broker.list", BROKER_LIST)
     props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, BROKER_LIST)
     props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, classOf[StringSerializer].getName)
     props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, classOf[StringSerializer].getName)
 
     val producer = new KafkaProducer[String, String](props)
-
+    //将jobMap中的数据全部上传
     for (entry <- jobMap.entrySet) {
       producer.send(new ProducerRecord(TOPIC, entry.getKey, entry.getValue))
       println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
