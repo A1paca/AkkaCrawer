@@ -70,7 +70,7 @@ object FiveOneCrawer{
     loopPar.foreach(i => requestGetUrl()(url.format(URLEncoder.encode(jobTag, "UTF-8"), i), jobMap))
     //输出格式
     println("爬取完毕，正在上传数据")
-    kafkaProducerUtils.kafkaUploadData("spark82:9092",jobTag,jobMap)
+    //kafkaProducerUtils.kafkaUploadData("spark82:9092",jobTag,jobMap)
 
   }
 
