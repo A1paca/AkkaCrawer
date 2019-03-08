@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="mySparkDemo">
+    <output-path>$PROJECT_DIR$/../AkkaCrawer/out/artifacts/mySparkDemo</output-path>
+    <root id="archive" name="mySparkDemo.jar">
+      <element id="module-output" name="AkkaCrawer" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../AkkaCrawer/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

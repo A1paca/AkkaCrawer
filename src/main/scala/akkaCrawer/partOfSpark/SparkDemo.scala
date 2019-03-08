@@ -1,11 +1,8 @@
 package akkaCrawer.partOfSpark
-import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
-import org.apache.spark.streaming.dstream.{DStream, ReceiverInputDStream}
 import org.apache.spark.streaming.kafka.KafkaUtils
-import scala.collection.immutable
-object sparkStreamingJobCount {
+object SparkDemo {
   def main(args: Array[String]): Unit = {
     val zkQuorum = "spark82:2181,spark83:2181,spark84:2181"
     val group = "test-group"
