@@ -3,7 +3,7 @@ package akkaCrawer.mainCrawer
 import java.util.Properties
 import java.util.concurrent.ConcurrentHashMap
 import scala.collection.JavaConversions._
-import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, ProducerRecord, RecordMetadata}
+import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, ProducerRecord}
 import org.apache.kafka.common.serialization.StringSerializer
 
 object kafkaProducerUtils {

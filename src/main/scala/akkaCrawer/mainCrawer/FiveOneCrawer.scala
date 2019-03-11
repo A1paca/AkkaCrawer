@@ -19,10 +19,14 @@ import scala.util.{Failure, Success, Try}
 
 object FiveOneCrawer{
   val URL = "https://search.51job.com/list/010000,000000,0000,00,9,99,%s,2,%d.html?lang=c&stype=&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&providesalary=99&lonlat=0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=" //访问的链接
-
+  val jobCity = Map(
+    "北京" -> "010",
+    "上海" -> "020",
+    "广州" -> "050020",
+    "深圳" -> "050090")
   //解析Document，需要对照网页源码进行解析
   //数据格式=（工作名称，工作地点，公司名称，薪资，详情链接）
-  def parseLiePinDoc(doc: Document, job: ConcurrentHashMap[String, String]) = {
+  def parseLiePinDoc(doc: Document, job: ConcurrentHashMap[String, String]): Int = {
     var count = 0
     for (elem <- doc.select("div.el")) {
       job.put(count.toString, elem.select("p").select("span").select("a").attr("title")+","+
@@ -52,13 +56,13 @@ object FiveOneCrawer{
         } else throw e
       case Success(doc) =>
         //成功抓取
-        val count = parseLiePinDoc(doc, jobMap);
+        val count = parseLiePinDoc(doc, jobMap)
         if (count == 0) {
-          Thread.sleep(delay);
+          Thread.sleep(delay)
           //递归进行再次抓取
           requestGetUrl(times - 1, delay)(url, jobMap)
         }
-        sum.addAndGet(count);
+        sum.addAndGet(count)
     }
   }
   //设置并发编程

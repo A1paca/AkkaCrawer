@@ -8,10 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="983916c6-73a4-4285-8625-d94658a30334" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/pom.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/CrawerTest.scala" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/CrawerTest.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/../AkkaCrawer/out/" />
     <ignored path="$PROJECT_DIR$/../AkkaCrawer/target/" />
@@ -27,8 +27,8 @@
       <file leaf-file-name="CrawerTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/CrawerTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="15" column="89" lean-forward="false" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+            <state relative-caret-position="192">
+              <caret line="11" column="475" lean-forward="false" selection-start-line="11" selection-start-column="475" selection-end-line="11" selection-end-column="475" />
               <folding />
             </state>
           </provider>
@@ -37,18 +37,20 @@
       <file leaf-file-name="LiePinCrawer.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="288">
+              <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+              <folding>
+                <element signature="e#31#65#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kafkaProducerUtils.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala">
+      <file leaf-file-name="FiveOneCrawer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
-              <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+              <caret line="69" column="20" lean-forward="false" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -101,7 +103,6 @@
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/KafkaProducerUtils.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala" />
-        <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/sparkStreamingDemo.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/KafkaHelper.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/sparkDemo.scala" />
@@ -111,6 +112,7 @@
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/sparkStreamingJobCount.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/pom.xml" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala" />
+        <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/CrawerTest.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala" />
@@ -222,6 +224,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="akkaCrawer" type="462c0819:PsiDirectoryNode" />
+              <item name="deployAkka" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AkkaCrawer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AkkaCrawer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="akkaCrawer" type="462c0819:PsiDirectoryNode" />
               <item name="mainCrawer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -279,6 +290,116 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AkkaCrawer" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/../AkkaCrawer/README.md</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -550,7 +671,7 @@
       <workItem from="1552042771019" duration="3936000" />
       <workItem from="1552095150357" duration="1302000" />
       <workItem from="1552204119985" duration="5138000" />
-      <workItem from="1552268627008" duration="6139000" />
+      <workItem from="1552268627008" duration="15736000" />
     </task>
     <task id="LOCAL-00001" summary="2018/09/27">
       <created>1538028729996</created>
@@ -685,11 +806,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552268666928</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="2019年3月11日11:48:58&#10;双爬虫更新了统一采集数据的结构：（工作名称，工作地点，公司名称，薪资，详情链接）">
+      <created>1552276174131</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1552276174131</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141401000" />
+    <option name="totallyTimeSpent" value="150998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -705,7 +833,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32790697" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32906976" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -802,14 +930,14 @@
     <MESSAGE value="2019年3月7日20:59:03" />
     <MESSAGE value="wdnmd好好一项目让老子玩坏了" />
     <MESSAGE value="kafka版本更换：0.8.2.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="kafka版本更换：0.8.2.2" />
+    <MESSAGE value="2019年3月11日11:48:58&#10;双爬虫更新了统一采集数据的结构：（工作名称，工作地点，公司名称，薪资，详情链接）" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019年3月11日11:48:58&#10;双爬虫更新了统一采集数据的结构：（工作名称，工作地点，公司名称，薪资，详情链接）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/deploy/testpath.scala" />
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -931,13 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/deployAkka/Master.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1056">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -980,14 +1101,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-streaming-kafka-0-8_2.11/2.3.3/spark-streaming-kafka-0-8_2.11-2.3.3.jar!/org/apache/spark/streaming/kafka/KafkaUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -1001,32 +1114,63 @@
         <state relative-caret-position="96">
           <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
           <folding>
-            <element signature="e#31#80#0" expanded="true" />
+            <element signature="e#31#80#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/CrawerTest.scala">
+    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="24">
+            <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="15" column="89" lean-forward="false" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+        <state relative-caret-position="259">
+          <caret line="31" column="9" lean-forward="false" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="e#31#58#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/deployAkka/Master.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="79" column="28" lean-forward="false" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        <state relative-caret-position="192">
+          <caret line="69" column="20" lean-forward="false" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/CrawerTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="11" column="475" lean-forward="false" selection-start-line="11" selection-start-column="475" selection-end-line="11" selection-end-column="475" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="288">
+          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="e#31#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
