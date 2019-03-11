@@ -21,12 +21,15 @@ object LiePinCrawer{
   val URL = "https://www.liepin.com/zhaopin/?ckid=6db5660b31dce27b&fromSearchBtn=2&init=-1&sfrom=click-pc_homepage-centre_searchbox-search_new&degradeFlag=0&key=%s&curPage=%d" //访问的链接
 
   //解析Document，需要对照网页源码进行解析
+  //数据格式=（工作名称，工作地点，公司名称，薪资，详情链接）
   def parseLiePinDoc(doc: Document, job: ConcurrentHashMap[String, String]) = {
     var count = 0
-    for (elem <- doc.select("div.job-info")) {
-      job.put(count.toString, elem.select("h3").first().attr("title")+","
-        + elem.select("span.text-warning").html+","
-        + elem.select("a.area").html
+    for (elem <- doc.select("div.sojob-item-main")) {
+      job.put(count.toString, elem.select("div.job-info").select("h3").select("a").html + ","
+        + elem.select("div.job-info").select("a.area").html + ","
+        + elem.select("p.company-name").select("a").html + ","
+        + elem.select("div.job-info").select("span.text-warning").html + ","
+        + elem.select("div.job-info").select("a").attr("href")
         +"\t"
       )
       count += 1
@@ -49,9 +52,9 @@ object LiePinCrawer{
         } else throw e
       case Success(doc) =>
         //成功抓取
-        val count = parseLiePinDoc(doc, jobMap);
+        val count = parseLiePinDoc(doc, jobMap)
         if (count == 0) {
-          Thread.sleep(delay);
+          Thread.sleep(delay)
           //递归进行再次抓取
           requestGetUrl(times - 1, delay)(url, jobMap)
         }

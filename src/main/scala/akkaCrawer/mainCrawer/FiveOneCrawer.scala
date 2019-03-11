@@ -21,14 +21,14 @@ object FiveOneCrawer{
   val URL = "https://search.51job.com/list/010000,000000,0000,00,9,99,%s,2,%d.html?lang=c&stype=&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&providesalary=99&lonlat=0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=" //访问的链接
 
   //解析Document，需要对照网页源码进行解析
-  //数据格式=（工作名称，公司名称，月薪，工作地点，详情链接）
+  //数据格式=（工作名称，工作地点，公司名称，薪资，详情链接）
   def parseLiePinDoc(doc: Document, job: ConcurrentHashMap[String, String]) = {
     var count = 0
     for (elem <- doc.select("div.el")) {
       job.put(count.toString, elem.select("p").select("span").select("a").attr("title")+","+
+        elem.select("span.t3").html +","+
         elem.select("span.t2").select("a").attr("title")+","+
         elem.select("span.t4").html +","+
-        elem.select("span.t3").html +","+
         elem.select("p").select("span").select("a").attr("href")+","+
         "\t"
       )
@@ -71,7 +71,9 @@ object FiveOneCrawer{
     //输出格式
     println("爬取完毕，正在上传数据")
     //kafkaProducerUtils.kafkaUploadData("spark82:9092",jobTag,jobMap)
-
+    for (entry <- jobMap.entrySet) {
+      println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
+    }
   }
 
   //直接输出
