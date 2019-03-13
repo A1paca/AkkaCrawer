@@ -19,6 +19,12 @@ import scala.util.{Failure, Success, Try}
 
 object LiePinCrawer{
   val URL ="https://www.liepin.com/zhaopin/?isAnalysis=&dqs=&pubTime=&salary=&subIndustry=&industryType=&compscale=&key=%s&init=-1&searchType=1&headckid=f7e0c6134efb914a&flushckid=1&compkind=&fromSearchBtn=2&sortFlag=15&ckid=48ad2f672866ef98&jobKind=&industries=&clean_condition=&siTag=k_cloHQj_hyIn0SLM9IfRg~fA9rXquZc5IkJpXC-Ycixw&d_sfrom=search_prime&d_ckId=4aa9bcfa173284d6457a24cb092a41f2&d_curPage=0&d_pageSize=40&d_headId=bf64f2e9294634842ebc9e26461793b9&curPage=%d"
+  //预留出工作地点方便日后爬取，请求参数为dqs
+  val jobCity = Map(
+    "北京" -> "010",
+    "上海" -> "020",
+    "广州" -> "050020",
+    "深圳" -> "050090")
   //解析Document，需要对照网页源码进行解析
   //数据格式=（工作名称，工作地点，公司名称，薪资，详情链接）
   def parseLiePinDoc(doc: Document, job: ConcurrentHashMap[String, String]): Int= {
@@ -84,7 +90,7 @@ object LiePinCrawer{
   //开始爬虫函数
   def startCrawler( jobTag: String,page :Int): Unit = {
     //线程数
-    val threadNum = 3
+    val threadNum = 1
     val t1 = System.currentTimeMillis
     concurrentCrawler(URL, jobTag, page, threadNum, new ConcurrentHashMap[String, String]())
     val t2 = System.currentTimeMillis
