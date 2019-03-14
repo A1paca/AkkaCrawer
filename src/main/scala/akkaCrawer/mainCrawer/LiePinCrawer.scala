@@ -18,9 +18,10 @@ import scala.util.{Failure, Success, Try}
 
 
 object LiePinCrawer{
-  val URL ="https://www.liepin.com/zhaopin/?isAnalysis=&dqs=&pubTime=&salary=&subIndustry=&industryType=&compscale=&key=%s&init=-1&searchType=1&headckid=f7e0c6134efb914a&flushckid=1&compkind=&fromSearchBtn=2&sortFlag=15&ckid=48ad2f672866ef98&jobKind=&industries=&clean_condition=&siTag=k_cloHQj_hyIn0SLM9IfRg~fA9rXquZc5IkJpXC-Ycixw&d_sfrom=search_prime&d_ckId=4aa9bcfa173284d6457a24cb092a41f2&d_curPage=0&d_pageSize=40&d_headId=bf64f2e9294634842ebc9e26461793b9&curPage=%d"
-  //预留出工作地点方便日后爬取，请求参数为dqs
-  val jobCity = Map(
+  //请求参数：dqs=地区，key=工作关键词，curPage=页数
+  val URL ="https://www.liepin.com/zhaopin/?isAnalysis=&dqs=%s&pubTime=&salary=&subIndustry=&industryType=&compscale=&key=%s&init=-1&searchType=1&headckid=f7e0c6134efb914a&flushckid=1&compkind=&fromSearchBtn=2&sortFlag=15&ckid=48ad2f672866ef98&jobKind=&industries=&clean_condition=&siTag=k_cloHQj_hyIn0SLM9IfRg~fA9rXquZc5IkJpXC-Ycixw&d_sfrom=search_prime&d_ckId=4aa9bcfa173284d6457a24cb092a41f2&d_curPage=0&d_pageSize=40&d_headId=bf64f2e9294634842ebc9e26461793b9&curPage=%d"
+  //工作地点
+  val jobCitysMap = Map(
     "北京" -> "010",
     "上海" -> "020",
     "广州" -> "050020",
@@ -31,7 +32,8 @@ object LiePinCrawer{
     var count = 0
     for (elem <- doc.select("div.sojob-item-main")) {
       job.put(count.toString, elem.select("div.job-info").select("h3").select("a").html + ","
-        + elem.select("div.job-info").select("span.area").html + ","
+        + elem.select("div.job-info").select("span.area").html
+        + elem.select("div.job-info").select("a.area").html+ ","
         + elem.select("p.company-name").select("a").html + ","
         + elem.select("div.job-info").select("span.text-warning").html + ","
         + elem.select("div.job-info").select("a").attr("href")
@@ -67,12 +69,12 @@ object LiePinCrawer{
     }
   }
   //设置并发编程
-  def concurrentCrawler(url: String, jobTag: String, maxPage: Int, threadNum: Int, jobMap: ConcurrentHashMap[String, String]): Unit = {
+  def concurrentCrawler(url: String, jobTag: String, jobCityNumber:String, maxPage: Int, threadNum: Int, jobMap: ConcurrentHashMap[String, String]): Unit = {
     val loopPar = (0 to maxPage).par
     // 设置并发线程数
     loopPar.tasksupport = new ForkJoinTaskSupport(new ForkJoinPool(threadNum))
     // 利用并发集合多线程同步抓取:遍历所有页
-    loopPar.foreach(i => requestGetUrl()(url.format(URLEncoder.encode(jobTag, "UTF-8"), 20 * i), jobMap))
+    loopPar.foreach(i => requestGetUrl()(url.format(URLEncoder.encode(jobCityNumber, "UTF-8"), URLEncoder.encode(jobTag, "UTF-8"), 20 * i), jobMap))
     //输出格式
     for (entry <- jobMap.entrySet) {
 
@@ -88,16 +90,20 @@ object LiePinCrawer{
     writer.close()
   }
   //开始爬虫函数
-  def startCrawler( jobTag: String,page :Int): Unit = {
-    //线程数
-    val threadNum = 1
-    val t1 = System.currentTimeMillis
-    concurrentCrawler(URL, jobTag, page, threadNum, new ConcurrentHashMap[String, String]())
-    val t2 = System.currentTimeMillis
-    println(s"抓取数：$sum  重试数：$fail  耗时(秒)：" + (t2 - t1) / 1000)
+  def startCrawler( jobTag: String, jobCity:String ,page :Int): Unit = {
+    if( jobCitysMap.contains( jobCity)){
+      val jobCityNumber = jobCitysMap(jobCity)
+      val threadNum = 1
+      val t1 = System.currentTimeMillis
+      concurrentCrawler(URL, jobTag, jobCityNumber, page, threadNum, new ConcurrentHashMap[String, String]())
+      val t2 = System.currentTimeMillis
+      println(s"抓取数：$sum  重试数：$fail  耗时(秒)：" + (t2 - t1) / 1000)
+    }else{
+      println( jobCity + "地区不存在")
+    }
   }
 //测试
   def main(args: Array[String]): Unit = {
-    startCrawler("java",0)
+    startCrawler("java", "广州", 0)
   }
 }

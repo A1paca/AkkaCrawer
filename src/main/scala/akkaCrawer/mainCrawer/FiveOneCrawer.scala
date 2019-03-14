@@ -7,6 +7,7 @@ import java.util.Date
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicInteger
 
+import akkaCrawer.mainCrawer.LiePinCrawer.{URL, jobCitysMap, parseLiePinDoc}
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 
@@ -18,20 +19,26 @@ import scala.util.{Failure, Success, Try}
 
 
 object FiveOneCrawer{
-  val URL = "https://search.51job.com/list/010000,000000,0000,00,9,99,%s,2,%d.html?lang=c&stype=&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&providesalary=99&lonlat=0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=" //访问的链接
+  val URL = "https://search.51job.com/list/%s00,000000,0000,00,9,99,%s,2,%d.html?lang=c&stype=&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&providesalary=99&lonlat=0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=" //访问的链接
 
+  val jobCitysMap = Map(
+    "北京" -> "0100",
+    "上海" -> "0200",
+    "广州" -> "0302",
+    "深圳" -> "0400")
   //解析Document，需要对照网页源码进行解析
   //数据格式=（工作名称，工作地点，公司名称，薪资，详情链接）
   def parseLiePinDoc(doc: Document, job: ConcurrentHashMap[String, String]): Int = {
     var count = 0
     for (elem <- doc.select("div.el")) {
-      job.put(count.toString, elem.select("p").select("span").select("a").attr("title")+","+
-        elem.select("span.t3").html +","+
-        elem.select("span.t2").select("a").attr("title")+","+
-        elem.select("span.t4").html +","+
-        elem.select("p").select("span").select("a").attr("href")+","+
-        "\t"
-      )
+     if(elem.select("p").select("span").select("a").attr("title").length != 0){
+       job.put(count.toString, elem.select("p").select("span").select("a").attr("title")+","+
+         elem.select("span.t3").html +","+
+         elem.select("span.t2").select("a").attr("title")+","+
+         elem.select("span.t4").html +","+
+         elem.select("p").select("span").select("a").attr("href")
+       )
+     }
       count += 1
     }
     count
@@ -58,41 +65,45 @@ object FiveOneCrawer{
           //递归进行再次抓取
           requestGetUrl(times - 1, delay)(url, jobMap)
         }
-        sum.addAndGet(count)
+        sum.addAndGet(count);
     }
   }
   //设置并发编程
-  def concurrentCrawler(url: String, jobTag: String, maxPage: Int, threadNum: Int, jobMap: ConcurrentHashMap[String, String]) = {
+  def concurrentCrawler(url: String, jobTag: String, jobCityNumber:String, maxPage: Int, threadNum: Int, jobMap: ConcurrentHashMap[String, String]): Unit = {
     val loopPar = (0 to maxPage).par
     // 设置并发线程数
     loopPar.tasksupport = new ForkJoinTaskSupport(new ForkJoinPool(threadNum))
     // 利用并发集合多线程同步抓取:遍历所有页
-    loopPar.foreach(i => requestGetUrl()(url.format(URLEncoder.encode(jobTag, "UTF-8"), i), jobMap))
+    loopPar.foreach(i => requestGetUrl()(url.format(URLEncoder.encode(jobCityNumber, "UTF-8"), URLEncoder.encode(jobTag, "UTF-8"), 20 * i), jobMap))
     //输出格式
-    println("爬取完毕，正在上传数据")
-    //kafkaProducerUtils.kafkaUploadData("spark82:9092",jobTag,jobMap)
     for (entry <- jobMap.entrySet) {
+
       println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
     }
+
   }
 
   //直接输出
-  def saveFile(file: String, jobMap: ConcurrentHashMap[String, String]) = {
+  def saveFile(file: String, jobMap: ConcurrentHashMap[String, String]): Unit = {
     val writer = new PrintWriter(new File(new SimpleDateFormat("yyyyMMdd").format(new Date()) + "_" + file ++ ".txt"))
     for ((_, value) <- jobMap) writer.println(value)
     writer.close()
   }
   //开始爬虫函数
-  def startCrawler( jobTag: String,page :Int) ={
-    //线程数
-    val threadNum = 1
-    val t1 = System.currentTimeMillis
-    concurrentCrawler(URL, jobTag, page, threadNum, new ConcurrentHashMap[String, String]())
-    val t2 = System.currentTimeMillis
-    println(s"抓取数：$sum  重试数：$fail  耗时(秒)：" + (t2 - t1) / 1000)
+  def startCrawler( jobTag: String, jobCity:String ,page :Int): Unit = {
+    if( jobCitysMap.contains( jobCity)){
+      val jobCityNumber = jobCitysMap(jobCity)
+      val threadNum = 1
+      val t1 = System.currentTimeMillis
+      concurrentCrawler(URL, jobTag, jobCityNumber, page, threadNum, new ConcurrentHashMap[String, String]())
+      val t2 = System.currentTimeMillis
+      println(s"抓取数：$sum  重试数：$fail  耗时(秒)：" + (t2 - t1) / 1000)
+    }else{
+      println( jobCity + "地区不存在")
+    }
   }
-//测试
+  //测试
   def main(args: Array[String]): Unit = {
-    startCrawler("java",2)
+    startCrawler("java", "广州", 1)
   }
 }
