@@ -7,7 +7,6 @@ import java.util.Date
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicInteger
 
-import akkaCrawer.mainCrawer.LiePinCrawer.{URL, jobCitysMap, parseLiePinDoc}
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 
@@ -16,18 +15,24 @@ import scala.collection.parallel.ForkJoinTaskSupport
 import scala.concurrent.forkjoin.ForkJoinPool
 import scala.util.{Failure, Success, Try}
 
-
-
+/**
+  * 此爬虫为51job网站下的爬虫设计
+  */
 object FiveOneCrawer{
-  val URL = "https://search.51job.com/list/%s00,000000,0000,00,9,99,%s,2,%d.html?lang=c&stype=&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&providesalary=99&lonlat=0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=" //访问的链接
-
+  //请求参数，第一个“，”前的为工作地区，倒数第二个“，”前的为关键字，最后一个“，”后的为爬取页数
+  val URL = "https://search.51job.com/list/%s00,000000,0000,00,9,99,%s,2,%d.html?lang=c&stype=&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&providesalary=99&lonlat=0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare="
+  //工作地区Map
   val jobCitysMap = Map(
     "北京" -> "0100",
     "上海" -> "0200",
     "广州" -> "0302",
     "深圳" -> "0400")
-  //解析Document，需要对照网页源码进行解析
-  //数据格式=（工作名称，工作地点，公司名称，薪资，详情链接）
+  /**
+    * @Description 用于解析Document，其map的数据格式为（工作名称，工作地点，公司名称，薪资，详情链接，发布时间）
+    * @param doc 解析网页的Document
+    * @param job 用于存储爬取的job信息
+    * @return 返回爬取的条数
+    */
   def parseLiePinDoc(doc: Document, job: ConcurrentHashMap[String, String]): Int = {
     var count = 0
     for (elem <- doc.select("div.el")) {
@@ -36,7 +41,8 @@ object FiveOneCrawer{
          elem.select("span.t3").html +","+
          elem.select("span.t2").select("a").attr("title")+","+
          elem.select("span.t4").html +","+
-         elem.select("p").select("span").select("a").attr("href")
+         elem.select("p").select("span").select("a").attr("href")+","+
+         elem.select("span.t5").html
        )
      }
       count += 1
@@ -46,7 +52,13 @@ object FiveOneCrawer{
 
   //用于记录总数，和失败次数
   val sum, fail: AtomicInteger = new AtomicInteger(0)
-  //抓取检测成功失败
+  /**
+    * @Description 用于检测抓取的成功和失败
+    * @param times 休眠时间
+    * @param delay 等待时间
+    * @param url 需要抓取的url
+    * @param jobMap 存储爬取的job信息
+    */
   def requestGetUrl(times: Int = 100, delay: Long = 10000)(url: String, jobMap: ConcurrentHashMap[String, String]): Unit = {
     Try(Jsoup.connect(url).get()) match {
       //使用try来判断是否成功和失败对网页进行抓取
@@ -68,7 +80,15 @@ object FiveOneCrawer{
         sum.addAndGet(count);
     }
   }
-  //设置并发编程
+  /**
+    * @Description 用于设置并发编程
+    * @param url 爬取的url
+    * @param jobTag 工作关键字
+    * @param jobCityNumber 用于替换url中的城市请求
+    * @param maxPage 爬取的最大页数
+    * @param threadNum 线程数
+    * @param jobMap 用于存储爬取的数据
+    */
   def concurrentCrawler(url: String, jobTag: String, jobCityNumber:String, maxPage: Int, threadNum: Int, jobMap: ConcurrentHashMap[String, String]): Unit = {
     val loopPar = (0 to maxPage).par
     // 设置并发线程数
@@ -89,9 +109,15 @@ object FiveOneCrawer{
     for ((_, value) <- jobMap) writer.println(value)
     writer.close()
   }
-  //开始爬虫函数
+  /**
+    * @Description 用于开始爬取函数
+    * @param jobTag 设置的爬取工作关键词
+    * @param jobCity 需要爬取的工作城市
+    * @param page 页数
+    */
   def startCrawler( jobTag: String, jobCity:String ,page :Int): Unit = {
     if( jobCitysMap.contains( jobCity)){
+      //取出爬取的城市所在url中的表示方式
       val jobCityNumber = jobCitysMap(jobCity)
       val threadNum = 1
       val t1 = System.currentTimeMillis

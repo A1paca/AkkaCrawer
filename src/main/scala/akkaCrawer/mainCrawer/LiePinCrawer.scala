@@ -16,7 +16,9 @@ import scala.concurrent.forkjoin.ForkJoinPool
 import scala.util.{Failure, Success, Try}
 
 
-
+/**
+  * 此爬虫为猎聘网站下的爬虫设计
+  */
 object LiePinCrawer{
   //请求参数：dqs=地区，key=工作关键词，curPage=页数
   val URL ="https://www.liepin.com/zhaopin/?isAnalysis=&dqs=%s&pubTime=&salary=&subIndustry=&industryType=&compscale=&key=%s&init=-1&searchType=1&headckid=f7e0c6134efb914a&flushckid=1&compkind=&fromSearchBtn=2&sortFlag=15&ckid=48ad2f672866ef98&jobKind=&industries=&clean_condition=&siTag=k_cloHQj_hyIn0SLM9IfRg~fA9rXquZc5IkJpXC-Ycixw&d_sfrom=search_prime&d_ckId=4aa9bcfa173284d6457a24cb092a41f2&d_curPage=0&d_pageSize=40&d_headId=bf64f2e9294634842ebc9e26461793b9&curPage=%d"
@@ -26,8 +28,12 @@ object LiePinCrawer{
     "上海" -> "020",
     "广州" -> "050020",
     "深圳" -> "050090")
-  //解析Document，需要对照网页源码进行解析
-  //数据格式=（工作名称，工作地点，公司名称，薪资，详情链接）
+  /**
+    * @Description 用于解析Document，其map的数据格式为（工作名称，工作地点，公司名称，薪资，详情链接，发布时间）
+    * @param doc 解析网页的Document
+    * @param job 用于存储爬取的job信息
+    * @return 返回爬取的条数
+    */
   def parseLiePinDoc(doc: Document, job: ConcurrentHashMap[String, String]): Int= {
     var count = 0
     for (elem <- doc.select("div.sojob-item-main")) {
@@ -36,8 +42,8 @@ object LiePinCrawer{
         + elem.select("div.job-info").select("a.area").html+ ","
         + elem.select("p.company-name").select("a").html + ","
         + elem.select("div.job-info").select("span.text-warning").html + ","
-        + elem.select("div.job-info").select("a").attr("href")
-        +"\t"
+        + elem.select("div.job-info").select("a").attr("href")+","+
+        elem.select("p.time-info").select("time").attr("title")
       )
       count += 1
     }
@@ -46,7 +52,13 @@ object LiePinCrawer{
 
   //用于记录总数，和失败次数
   val sum, fail: AtomicInteger = new AtomicInteger(0)
-  //抓取检测成功失败
+  /**
+    * @Description 用于检测抓取的成功和失败
+    * @param times 休眠时间
+    * @param delay 等待时间
+    * @param url 需要抓取的url
+    * @param jobMap 存储爬取的job信息
+    */
   def requestGetUrl(times: Int = 100, delay: Long = 10000)(url: String, jobMap: ConcurrentHashMap[String, String]): Unit = {
     Try(Jsoup.connect(url).get()) match {
       //使用try来判断是否成功和失败对网页进行抓取
@@ -68,7 +80,15 @@ object LiePinCrawer{
         sum.addAndGet(count);
     }
   }
-  //设置并发编程
+  /**
+    * @Description 用于设置并发编程
+    * @param url 爬取的url
+    * @param jobTag 工作关键字
+    * @param jobCityNumber 用于替换url中的城市请求
+    * @param maxPage 爬取的最大页数
+    * @param threadNum 线程数
+    * @param jobMap 用于存储爬取的数据
+    */
   def concurrentCrawler(url: String, jobTag: String, jobCityNumber:String, maxPage: Int, threadNum: Int, jobMap: ConcurrentHashMap[String, String]): Unit = {
     val loopPar = (0 to maxPage).par
     // 设置并发线程数
@@ -89,7 +109,12 @@ object LiePinCrawer{
     for ((_, value) <- jobMap) writer.println(value)
     writer.close()
   }
-  //开始爬虫函数
+  /**
+    * @Description 用于开始爬取函数
+    * @param jobTag 设置的爬取工作关键词
+    * @param jobCity 需要爬取的工作城市
+    * @param page 页数
+    */
   def startCrawler( jobTag: String, jobCity:String ,page :Int): Unit = {
     if( jobCitysMap.contains( jobCity)){
       val jobCityNumber = jobCitysMap(jobCity)
