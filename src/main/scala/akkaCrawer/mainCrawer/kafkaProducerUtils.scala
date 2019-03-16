@@ -1,19 +1,20 @@
 package akkaCrawer.mainCrawer
-
 import java.util.Properties
 import java.util.concurrent.ConcurrentHashMap
+
 import scala.collection.JavaConversions._
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, ProducerRecord}
 import org.apache.kafka.common.serialization.StringSerializer
+import org.apache.log4j.BasicConfigurator
 
 object kafkaProducerUtils {
   /**
     * 此方法用于将Akka作为生产者上传数据
     * @param topic:topic名称
-    * @param brokerList：broker地址
     */
-  def kafkaUploadData(brokerList:String, topic:String, jobMap: ConcurrentHashMap[String, String]): Unit ={
-    def BROKER_LIST = brokerList
+  def kafkaUploadData( topic:String, jobMap: ConcurrentHashMap[String, String]): Unit ={
+    BasicConfigurator.configure()
+    def BROKER_LIST = "192.168.80.82:9092,192.168.80.83:9092,192.168.80.84:9092"
     def TOPIC = topic
     println("开始产生消息")
     val props = new Properties()

@@ -97,7 +97,7 @@ object LiePinCrawer{
     loopPar.foreach(i => requestGetUrl()(url.format(URLEncoder.encode(jobCityNumber, "UTF-8"), URLEncoder.encode(jobTag, "UTF-8"), 20 * i), jobMap))
     //输出格式
     for (entry <- jobMap.entrySet) {
-
+      //kafkaProducerUtils.kafkaUploadData(jobTag,jobMap)
       println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
     }
 
@@ -129,6 +129,6 @@ object LiePinCrawer{
   }
 //测试
   def main(args: Array[String]): Unit = {
-    startCrawler("java", "广州", 0)
+    startCrawler("java", "北京", 0)
   }
 }

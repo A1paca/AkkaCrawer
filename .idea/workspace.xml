@@ -10,11 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="983916c6-73a4-4285-8625-d94658a30334" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/misc.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/misc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__jline_jline_0_9_94.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/CrawerTest.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/AkkaCrawer.iml" afterPath="$PROJECT_DIR$/../AkkaCrawer/AkkaCrawer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/pom.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala" afterPath="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__com_101tec_zkclient_0_3.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__com_101tec_zkclient_0_10.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_3_2.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_3.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_kafka_kafka_2_11_0_8_2_2.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_kafka_kafka_2_11_0_11_0_3.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_kafka_kafka_clients_0_8_2_2.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_kafka_kafka_clients_0_11_0_3.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_spark_spark_streaming_kafka_0_8_2_11_2_1_0.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_spark_spark_streaming_kafka_0_10_2_11_2_1_0.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_6.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_10.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_scala_lang_modules_scala_parser_combinators_2_11_1_0_2.xml" afterPath="$PROJECT_DIR$/../AkkaCrawer/.idea/libraries/Maven__org_scala_lang_modules_scala_parser_combinators_2_11_1_0_4.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/../AkkaCrawer/out/" />
     <ignored path="$PROJECT_DIR$/../AkkaCrawer/target/" />
@@ -27,35 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CrawerTest.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/CrawerTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-              <folding>
-                <element signature="e#31#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LiePinCrawer.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1416">
-              <caret line="83" column="27" lean-forward="true" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
-              <folding>
-                <element signature="e#31#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FiveOneCrawer.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="984">
-              <caret line="44" column="28" lean-forward="true" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+            <state relative-caret-position="307">
+              <caret line="99" column="32" lean-forward="true" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
               <folding>
                 <element signature="e#31#65#0" expanded="true" />
               </folding>
@@ -66,9 +55,23 @@
       <file leaf-file-name="kafkaProducerUtils.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="216">
+              <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+              <folding>
+                <element signature="e#30#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FiveOneCrawer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-389">
+              <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <folding>
+                <element signature="e#31#65#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,8 +79,30 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../AkkaCrawer/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="-744">
+              <caret line="53" column="50" lean-forward="true" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SparkDemo.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+              <folding>
+                <element signature="e#34#89#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KafkaUtils.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-streaming-kafka-0-10_2.11/2.1.0/spark-streaming-kafka-0-10_2.11-2.1.0.jar!/org/apache/spark/streaming/kafka010/KafkaUtils.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -86,7 +111,7 @@
       <file leaf-file-name="Master.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/deployAkka/Master.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1259">
+            <state relative-caret-position="696">
               <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
               <folding>
                 <element signature="e#31#76#0" expanded="true" />
@@ -98,7 +123,7 @@
       <file leaf-file-name="Worker.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/deployAkka/Worker.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-768">
+            <state relative-caret-position="384">
               <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
               <folding />
             </state>
@@ -151,7 +176,6 @@
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/kafkaUtils/utilForKafka.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/KafkaProducerUtils.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest.scala" />
-        <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/sparkStreamingDemo.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/KafkaHelper.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/sparkDemo.scala" />
@@ -159,12 +183,13 @@
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/DirectKafkaWordCount.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/org/apche/spark/Logging.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/sparkStreamingJobCount.scala" />
-        <option value="$PROJECT_DIR$/../AkkaCrawer/pom.xml" />
-        <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala" />
-        <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/CrawerTest.scala" />
+        <option value="$PROJECT_DIR$/../AkkaCrawer/pom.xml" />
+        <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala" />
+        <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala" />
         <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" />
+        <option value="$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala" />
       </list>
     </option>
   </component>
@@ -199,7 +224,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="24" />
-    <option name="y" value="76" />
+    <option name="y" value="109" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -243,37 +268,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
-              <item name="src/main/scala" type="cbb8eebc:String" user="src/main/scala" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
-              <item name="src/main/scala" type="cbb8eebc:String" user="src/main/scala" />
-              <item name="akkaCrawer/deploy" type="cbb8eebc:String" user="akkaCrawer/deploy" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Default">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -285,8 +281,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -346,6 +340,37 @@
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="akkaCrawer" type="462c0819:PsiDirectoryNode" />
               <item name="partOfSpark" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
+              <item name="src/main/scala" type="cbb8eebc:String" user="src/main/scala" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
+              <item name="src/main/scala" type="cbb8eebc:String" user="src/main/scala" />
+              <item name="akkaCrawer/deploy" type="cbb8eebc:String" user="akkaCrawer/deploy" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Default">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
             </path>
           </expand>
           <select />
@@ -523,14 +548,14 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="sparkStreamingDemo" type="Application" factoryName="Application" temporary="true">
+    <configuration name="kafkaTest1" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="akkaCrawer.partOfSpark.*" />
+          <option name="PATTERN" value="akkaCrawer.mainCrawer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="akkaCrawer.partOfSpark.sparkStreamingDemo" />
+      <option name="MAIN_CLASS_NAME" value="akkaCrawer.mainCrawer.kafkaTest1" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../AkkaCrawer" />
@@ -566,16 +591,16 @@
       <item index="1" class="java.lang.String" itemvalue="Application.FiveOneCrawer" />
       <item index="2" class="java.lang.String" itemvalue="Application.LiePinCrawer" />
       <item index="3" class="java.lang.String" itemvalue="Application.sparkStreamingJobCount" />
-      <item index="4" class="java.lang.String" itemvalue="Application.sparkStreamingDemo" />
-      <item index="5" class="java.lang.String" itemvalue="Application.CrawerTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.CrawerTest" />
+      <item index="5" class="java.lang.String" itemvalue="Application.kafkaTest1" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.LiePinCrawer" />
-        <item index="1" class="java.lang.String" itemvalue="Application.FiveOneCrawer" />
-        <item index="2" class="java.lang.String" itemvalue="Application.CrawerTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.sparkStreamingJobCount" />
-        <item index="4" class="java.lang.String" itemvalue="Application.sparkStreamingDemo" />
+        <item index="1" class="java.lang.String" itemvalue="Application.kafkaTest1" />
+        <item index="2" class="java.lang.String" itemvalue="Application.FiveOneCrawer" />
+        <item index="3" class="java.lang.String" itemvalue="Application.CrawerTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.sparkStreamingJobCount" />
       </list>
     </recent_temporary>
   </component>
@@ -637,7 +662,10 @@
       <workItem from="1552483815028" duration="747000" />
       <workItem from="1552540498171" duration="15909000" />
       <workItem from="1552569063061" duration="3429000" />
-      <workItem from="1552612889371" duration="2076000" />
+      <workItem from="1552612889371" duration="2907000" />
+      <workItem from="1552624954829" duration="624000" />
+      <workItem from="1552648423771" duration="5469000" />
+      <workItem from="1552708958876" duration="9799000" />
     </task>
     <task id="LOCAL-00001" summary="2018/09/27">
       <created>1538028729996</created>
@@ -800,77 +828,54 @@
       <option name="project" value="LOCAL" />
       <updated>1552567065117</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="2019年3月15日10:04:49&#10;1.注释逐步规范化&#10;2.爬虫新加入爬取招聘信息发布的时间，现其数据结构为：（工作名称，工作地址，公司名称，详情链接，发布时间）">
+      <created>1552615646994</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1552615646994</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179084000" />
+    <option name="totallyTimeSpent" value="195807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32906976" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32790697" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21781115" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SmartIM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32790697" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2274678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SmartIM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868758" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29613733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SmartIM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -921,7 +926,8 @@
     <MESSAGE value="2019年3月11日21:42:35&#10;爬虫部分code review和猎聘网站爬取错误数据的修正" />
     <MESSAGE value="2019年3月13日21:31:51" />
     <MESSAGE value="2019年3月14日更新&#10;1.爬虫数据爬取为空的问题已解决&#10;2.为爬虫增加地区选择功能&#10;3.猎聘和51job网站的url加入格式化参数&#10;4.51job上爬取的数据丢失地区问题已解决" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019年3月14日更新&#10;1.爬虫数据爬取为空的问题已解决&#10;2.为爬虫增加地区选择功能&#10;3.猎聘和51job网站的url加入格式化参数&#10;4.51job上爬取的数据丢失地区问题已解决" />
+    <MESSAGE value="2019年3月15日10:04:49&#10;1.注释逐步规范化&#10;2.爬虫新加入爬取招聘信息发布的时间，现其数据结构为：（工作名称，工作地址，公司名称，详情链接，发布时间）" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019年3月15日10:04:49&#10;1.注释逐步规范化&#10;2.爬虫新加入爬取招聘信息发布的时间，现其数据结构为：（工作名称，工作地址，公司名称，详情链接，发布时间）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -930,32 +936,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/deploy/crawerConf.scala" />
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/sbin/start-akkacrawer.sh" />
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/deployAkka/Master.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="85" column="49" lean-forward="false" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/conf/AkkaCrawer-env.sh" />
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1022,13 +1002,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/sparkStreamingDemo.scala" />
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/KafkaHelper.scala" />
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala" />
@@ -1087,13 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="14" column="48" lean-forward="false" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/typesafe/akka/akka-actor_2.11/2.5.3/akka-actor_2.11-2.5.3.jar!/akka/actor/ScalaActorSelection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1101,35 +1067,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/CrawerTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="e#31#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/deployAkka/Master.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1259">
+        <state relative-caret-position="696">
           <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
           <folding>
             <element signature="e#31#76#0" expanded="true" />
@@ -1139,16 +1079,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/deployAkka/Worker.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-768">
+        <state relative-caret-position="384">
           <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/checkpoint/.temp.crc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/checkpoint/receivedBlockMetadata/log-1552052460010-1552052520010">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.11.0.3/kafka-clients-0.11.0.3.jar!/org/apache/kafka/clients/producer/ProducerRecord.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="48" column="11" lean-forward="false" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2472">
+          <caret line="138" column="11" lean-forward="false" selection-start-line="138" selection-start-column="11" selection-end-line="138" selection-end-column="11" />
+          <folding>
+            <element signature="e#4787#4788#0" expanded="false" />
+            <element signature="e#4813#4814#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.11.0.3/kafka-clients-0.11.0.3.jar!/org/apache/kafka/clients/producer/ProducerConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/CrawerTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="19" column="68" lean-forward="false" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="e#30#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1416">
-          <caret line="83" column="27" lean-forward="true" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+        <state relative-caret-position="307">
+          <caret line="99" column="32" lean-forward="true" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
           <folding>
             <element signature="e#31#65#0" expanded="true" />
           </folding>
@@ -1157,10 +1164,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
-          <caret line="44" column="28" lean-forward="true" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+        <state relative-caret-position="-389">
+          <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
             <element signature="e#31#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-744">
+          <caret line="53" column="50" lean-forward="true" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-streaming-kafka-0-10_2.11/2.1.0/spark-streaming-kafka-0-10_2.11-2.1.0.jar!/org/apache/spark/streaming/kafka010/KafkaUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AkkaCrawer/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="e#34#89#0" expanded="true" />
           </folding>
         </state>
       </provider>

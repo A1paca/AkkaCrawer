@@ -27,9 +27,10 @@
     <orderEntry type="library" name="Maven: io.aeron:aeron-client:1.2.5" level="project" />
     <orderEntry type="library" name="Maven: org.agrona:agrona:0.9.5" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.11.3" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.spark:spark-streaming-kafka-0-8_2.11:2.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.spark:spark-streaming-kafka-0-10_2.11:2.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.spark:spark-tags_2.11:2.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.scalatest:scalatest_2.11:2.2.6" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.spark-project.spark:unused:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.spark:spark-core_2.11:2.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.avro:avro-mapred:hadoop2:1.7.7" level="project" />
@@ -141,16 +142,13 @@
     <orderEntry type="library" name="Maven: net.sf.py4j:py4j:0.10.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-crypto:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.spark:spark-streaming_2.11:2.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.kafka:kafka-clients:0.8.2.2" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.kafka:kafka_2.11:0.8.2.2" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.kafka:kafka-clients:0.11.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.kafka:kafka_2.11:0.11.0.3" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.jopt-simple:jopt-simple:5.0.3" level="project" />
     <orderEntry type="library" name="Maven: com.yammer.metrics:metrics-core:2.2.0" level="project" />
-    <orderEntry type="library" name="Maven: net.sf.jopt-simple:jopt-simple:3.2" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.101tec:zkclient:0.3" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper:3.4.6" level="project" />
-    <orderEntry type="library" name="Maven: jline:jline:0.9.94" level="project" />
-    <orderEntry type="library" name="Maven: junit:junit:3.8.1" level="project" />
+    <orderEntry type="library" name="Maven: com.101tec:zkclient:0.10" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper:3.4.10" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-simple:1.8.0-beta2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-nop:1.7.24" level="project" />
     <orderEntry type="library" name="Maven: com.thoughtworks.paranamer:paranamer:2.8" level="project" />
