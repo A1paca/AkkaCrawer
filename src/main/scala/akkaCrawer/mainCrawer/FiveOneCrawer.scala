@@ -97,7 +97,7 @@ object FiveOneCrawer{
     loopPar.foreach(i => requestGetUrl()(url.format(URLEncoder.encode(jobCityNumber, "UTF-8"), URLEncoder.encode(jobTag, "UTF-8"), 20 * i), jobMap))
     //输出格式
     for (entry <- jobMap.entrySet) {
-      //kafkaProducerUtils.kafkaUploadData(jobTag,jobMap)
+      kafkaProducerUtils.kafkaUploadData(jobTag,jobMap)
       println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
     }
 
