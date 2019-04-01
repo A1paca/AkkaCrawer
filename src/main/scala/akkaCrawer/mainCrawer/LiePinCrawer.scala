@@ -41,13 +41,28 @@ object LiePinCrawer{
         + elem.select("div.job-info").select("span.area").html
         + elem.select("div.job-info").select("a.area").html+ ","
         + elem.select("p.company-name").select("a").html + ","
-        + elem.select("div.job-info").select("span.text-warning").html + ","
+        + salarySplit(elem.select("div.job-info").select("span.text-warning").html )+ ","
         + elem.select("div.job-info").select("a").attr("href")+","+
         elem.select("p.time-info").select("time").attr("title")
       )
       count += 1
     }
     count
+  }
+
+  /**
+    * 用于格式化爬取薪资的数据
+    * @param liePinJob 爬取的猎聘薪资
+    * @return 格式化后的薪资
+    */
+  def salarySplit(liePinJob: String ): String ={
+    if(liePinJob != "面议" ){
+      val jobSalarySplited: Array[String] = liePinJob.substring(0, liePinJob.length-1).split("-",2)
+      val salaryLower = jobSalarySplited(0).toDouble / 12
+      val salaryUpper = jobSalarySplited(1).toDouble / 12
+      val jobSalary = salaryLower.formatted("%.1f") + "-" + salaryUpper.formatted("%.1f") + "万/月"
+      jobSalary
+    }else liePinJob
   }
 
   //用于记录总数，和失败次数
