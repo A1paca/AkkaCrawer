@@ -37,7 +37,9 @@ object LiePinCrawer{
   def parseLiePinDoc(doc: Document, job: ConcurrentHashMap[String, String]): Int= {
     var count = 0
     for (elem <- doc.select("div.sojob-item-main")) {
-      job.put(count.toString, elem.select("div.job-info").select("h3").select("a").html + ","
+      job.put(elem.select("p.company-name").select("a").html + ":"
+        +elem.select("div.job-info").select("h3").select("a").html ,
+        elem.select("div.job-info").select("h3").select("a").html + ","
         + elem.select("div.job-info").select("span.area").html
         + elem.select("div.job-info").select("a.area").html+ ","
         + elem.select("p.company-name").select("a").html + ","
@@ -104,18 +106,14 @@ object LiePinCrawer{
     * @param threadNum 线程数
     * @param jobMap 用于存储爬取的数据
     */
-  def concurrentCrawler(url: String, jobTag: String, jobCityNumber:String, maxPage: Int, threadNum: Int, jobMap: ConcurrentHashMap[String, String]): Unit = {
+  def concurrentCrawler(url: String, jobTag: String, jobCityNumber:String, maxPage: Int, threadNum: Int, jobMap: ConcurrentHashMap[String, String]): ConcurrentHashMap[String, String] = {
     val loopPar = (0 to maxPage).par
     // 设置并发线程数
     loopPar.tasksupport = new ForkJoinTaskSupport(new ForkJoinPool(threadNum))
     // 利用并发集合多线程同步抓取:遍历所有页
     loopPar.foreach(i => requestGetUrl()(url.format(URLEncoder.encode(jobCityNumber, "UTF-8"), URLEncoder.encode(jobTag, "UTF-8"), 20 * i), jobMap))
     //输出格式
-    for (entry <- jobMap.entrySet) {
-      //kafkaProducerUtils.kafkaUploadData(jobTag,jobMap)
-      println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
-    }
-
+    jobMap
   }
 
   //直接输出
@@ -135,7 +133,11 @@ object LiePinCrawer{
       val jobCityNumber = jobCitysMap(jobCity)
       val threadNum = 1
       val t1 = System.currentTimeMillis
-      concurrentCrawler(URL, jobTag, jobCityNumber, page, threadNum, new ConcurrentHashMap[String, String]())
+      val jobMap = concurrentCrawler(URL, jobTag, jobCityNumber, page, threadNum, new ConcurrentHashMap[String, String]())
+      kafkaProducerUtils.kafkaUploadData(jobTag,jobMap)
+      for (entry <- jobMap.entrySet) {
+        println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
+      }
       val t2 = System.currentTimeMillis
       println(s"抓取数：$sum  重试数：$fail  耗时(秒)：" + (t2 - t1) / 1000)
     }else{

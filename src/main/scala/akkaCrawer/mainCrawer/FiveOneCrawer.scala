@@ -37,7 +37,9 @@ object FiveOneCrawer{
     var count = 0
     for (elem <- doc.select("div.el")) {
      if(elem.select("p").select("span").select("a").attr("title").length != 0){
-       job.put(count.toString, elem.select("p").select("span").select("a").attr("title")+","+
+       job.put(elem.select("span.t2").select("a").attr("title") + ":"
+         + elem.select("p").select("span").select("a").attr("title"),
+         elem.select("p").select("span").select("a").attr("title")+","+
          elem.select("span.t3").html +","+
          elem.select("span.t2").select("a").attr("title")+","+
          elem.select("span.t4").html +","+
@@ -89,18 +91,14 @@ object FiveOneCrawer{
     * @param threadNum 线程数
     * @param jobMap 用于存储爬取的数据
     */
-  def concurrentCrawler(url: String, jobTag: String, jobCityNumber:String, maxPage: Int, threadNum: Int, jobMap: ConcurrentHashMap[String, String]): Unit = {
+  def concurrentCrawler(url: String, jobTag: String, jobCityNumber:String, maxPage: Int, threadNum: Int, jobMap: ConcurrentHashMap[String, String]): ConcurrentHashMap[String, String]  = {
     val loopPar = (0 to maxPage).par
     // 设置并发线程数
     loopPar.tasksupport = new ForkJoinTaskSupport(new ForkJoinPool(threadNum))
     // 利用并发集合多线程同步抓取:遍历所有页
     loopPar.foreach(i => requestGetUrl()(url.format(URLEncoder.encode(jobCityNumber, "UTF-8"), URLEncoder.encode(jobTag, "UTF-8"), 20 * i), jobMap))
     //输出格式
-    for (entry <- jobMap.entrySet) {
-      //kafkaProducerUtils.kafkaUploadData(jobTag,jobMap)
-      println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
-    }
-
+    jobMap
   }
 
   //直接输出
@@ -121,7 +119,11 @@ object FiveOneCrawer{
       val jobCityNumber = jobCitysMap(jobCity)
       val threadNum = 1
       val t1 = System.currentTimeMillis
-      concurrentCrawler(URL, jobTag, jobCityNumber, page, threadNum, new ConcurrentHashMap[String, String]())
+      val jobMap = concurrentCrawler(URL, jobTag, jobCityNumber, page, threadNum, new ConcurrentHashMap[String, String]())
+      kafkaProducerUtils.kafkaUploadData(jobTag,jobMap)
+      for (entry <- jobMap.entrySet) {
+        println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
+      }
       val t2 = System.currentTimeMillis
       println(s"抓取数：$sum  重试数：$fail  耗时(秒)：" + (t2 - t1) / 1000)
     }else{
