@@ -27,7 +27,7 @@ object kafkaProducerUtils {
     val producer = new KafkaProducer[String, String](props)
     //将jobMap中的数据全部上传
     for (entry <- jobMap.entrySet) {
-      producer.send(new ProducerRecord(TOPIC, entry.getKey, entry.getValue))
+      producer.send(new ProducerRecord(TOPIC,null, entry.getValue))
       println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
     }
     producer.close

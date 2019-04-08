@@ -135,9 +135,6 @@ object LiePinCrawer{
       val t1 = System.currentTimeMillis
       val jobMap = concurrentCrawler(URL, jobTag, jobCityNumber, page, threadNum, new ConcurrentHashMap[String, String]())
       kafkaProducerUtils.kafkaUploadData(jobTag,jobMap)
-      for (entry <- jobMap.entrySet) {
-        println("上传数据：Key = " + entry.getKey + ", Value = " + entry.getValue)
-      }
       val t2 = System.currentTimeMillis
       println(s"抓取数：$sum  重试数：$fail  耗时(秒)：" + (t2 - t1) / 1000)
     }else{

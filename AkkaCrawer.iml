@@ -152,5 +152,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-simple:1.8.0-beta2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-nop:1.7.24" level="project" />
     <orderEntry type="library" name="Maven: com.thoughtworks.paranamer:paranamer:2.8" level="project" />
+    <orderEntry type="library" name="scala-sdk-2.11.12-bin-009e59a" level="application" />
   </component>
 </module>
