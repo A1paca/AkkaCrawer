@@ -21,7 +21,7 @@ object SparkDemo {
       .set("spark.streaming.kafka.maxRatePerPartition", "50000")
       .set("spark.streaming.kafka.maxRetries", "3")
 
-    val streamingContext: StreamingContext = new StreamingContext(conf, Seconds(1))
+    val streamingContext: StreamingContext = new StreamingContext(conf, Seconds(3))
 
     val kafkaParams: Map[String, Object] = Map[String, Object](
       "bootstrap.servers" -> "192.168.80.82:9092,192.168.80.83:9092,192.168.80.84:9092",
@@ -32,10 +32,10 @@ object SparkDemo {
       "enable.auto.commit" -> (true: java.lang.Boolean)
     )
 
-    /** 可以配置多个 */
+    /**配置多个 */
     val topics = Array("java")
 
-    /** 2、这种订阅会读取所有的partition数据 */
+    /** 读取所有的partition数据 */
     val stream2: InputDStream[ConsumerRecord[String, String]] = KafkaUtils.createDirectStream[String, String](
       streamingContext,
       PreferConsistent,
