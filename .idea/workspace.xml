@@ -6,12 +6,20 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" description="* @return Int" line="29" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" description="* @return Int" line="35" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="983916c6-73a4-4285-8625-d94658a30334" name="Default" comment="2019年4月8日20:32:10&#10;1.更新spark中读取kafka数据，暂未维护offset&#10;2.更新log4j配置文件，将log日志简要输出&#10;3.修复了重复写入kafka的问题">
+    <list default="true" id="983916c6-73a4-4285-8625-d94658a30334" name="Default" comment="2019年4月11日21:42:40&#10;更新了一下markdown&#10;最近在写数据库的传输部分了">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_11_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/akkaCrawer/partOfSpark/DBUtil.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_11_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AkkaCrawer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AkkaCrawer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2376">
-              <caret line="112" column="26" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
+            <state relative-caret-position="253">
+              <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="12" />
               <folding>
                 <element signature="e#31#65#0" expanded="true" />
               </folding>
@@ -39,29 +47,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-393">
-              <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="-504">
+              <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
               <folding>
-                <element signature="e#30#57#0" expanded="true" />
+                <element signature="e#31#65#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -70,33 +60,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="447">
-              <caret line="50" column="10" lean-forward="true" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+              <caret line="55" column="43" lean-forward="true" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
               <folding>
                 <element signature="e#34#89#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="624">
-                <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/partOfSpark/kafkaCunsumer.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="41" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="43" />
-              <folding>
-                <element signature="e#32#74#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,15 +117,16 @@
         <option value="$PROJECT_DIR$/src/main/scala/akkaCrawer/org/apche/spark/Logging.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaCrawer/partOfSpark/sparkStreamingJobCount.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/CrawerTest.scala" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/kafkaTest1.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaCrawer/partOfSpark/kafkaCunsumer.scala" />
         <option value="$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar!/scala/util/matching/Regex.class" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/RegexTest.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/scala/akkaCrawer/partOfSpark/DBUtil.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala" />
       </list>
@@ -224,37 +191,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
-              <item name="src/main/scala" type="cbb8eebc:String" user="src/main/scala" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
-              <item name="src/main/scala" type="cbb8eebc:String" user="src/main/scala" />
-              <item name="akkaCrawer/deploy" type="cbb8eebc:String" user="akkaCrawer/deploy" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Default">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -326,6 +262,37 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
+              <item name="src/main/scala" type="cbb8eebc:String" user="src/main/scala" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
+              <item name="src/main/scala" type="cbb8eebc:String" user="src/main/scala" />
+              <item name="akkaCrawer/deploy" type="cbb8eebc:String" user="akkaCrawer/deploy" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Default">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="AkkaCrawer" type="cbb8eebc:String" user="AkkaCrawer" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -342,7 +309,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554988380667" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555240114369" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -361,7 +328,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FiveOneCrawer">
+  <component name="RunManager" selected="Application.sparkStreamingJobCount">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -492,9 +459,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.sparkStreamingJobCount" />
         <item itemvalue="Application.FiveOneCrawer" />
         <item itemvalue="Application.LiePinCrawer" />
-        <item itemvalue="Application.sparkStreamingJobCount" />
         <item itemvalue="Application.kafkaCunsumer" />
         <item itemvalue="Application.RegexTest" />
       </list>
@@ -576,7 +543,9 @@
       <workItem from="1554718858225" duration="7308000" />
       <workItem from="1554889534194" duration="604000" />
       <workItem from="1554892694959" duration="1574000" />
-      <workItem from="1554974906245" duration="6485000" />
+      <workItem from="1554974906245" duration="7148000" />
+      <workItem from="1555158790030" duration="599000" />
+      <workItem from="1555215879637" duration="11910000" />
     </task>
     <task id="LOCAL-00001" summary="2018/09/27">
       <created>1538028729996</created>
@@ -767,17 +736,24 @@
       <option name="project" value="LOCAL" />
       <updated>1554726842395</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="2019年4月11日21:42:40&#10;更新了一下markdown&#10;最近在写数据库的传输部分了">
+      <created>1554990197318</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1554990197318</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253288000" />
+    <option name="totallyTimeSpent" value="266460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29613733" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3004292" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -876,10 +852,10 @@
     <MESSAGE value="2019年3月16日16:03:35&#10;1.kafka版本更新至0.11，为了使用KafkaTools在使用场景下进行展示&#10;2.kafka-spark-streaming版本使用kafka010版本&#10;3.解决了kafka的日志无法输出问题，现在可以看到上传数据的log信息了。&#10;4.版本更新后的kafka与爬虫连接问题。&#10;5.由于依赖库更新后，SparkDemo暂时处于废弃状态。&#10;6.在本地测试了KafkaTools的相关插件，更新hosts后崩溃问题暂时解决。" />
     <MESSAGE value="2019年3月21日19:25:41&#10;1.由于spark2.1.0中存在着一个major级的bug：多消费者读取kafka数据时会出现offset错误；暂时将spark部分进行重构，故SparkDemo代码将为空&#10;2.增加KafkaConsumer测试类，供检测kafka中的是否有数据" />
     <MESSAGE value="2019年4月8日20:32:10&#10;1.更新spark中读取kafka数据，暂未维护offset&#10;2.更新log4j配置文件，将log日志简要输出&#10;3.修复了重复写入kafka的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019年4月8日20:32:10&#10;1.更新spark中读取kafka数据，暂未维护offset&#10;2.更新log4j配置文件，将log日志简要输出&#10;3.修复了重复写入kafka的问题" />
+    <MESSAGE value="2019年4月11日21:42:40&#10;更新了一下markdown&#10;最近在写数据库的传输部分了" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019年4月11日21:42:40&#10;更新了一下markdown&#10;最近在写数据库的传输部分了" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/akka/crawer/deploy/RemoteInfo.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/deploy/crawerConf.scala" />
     <entry file="file://$PROJECT_DIR$/sbin/start-akkacrawer.sh" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/deploy/testpath.scala" />
@@ -1056,16 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2376">
-          <caret line="112" column="26" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
-          <folding>
-            <element signature="e#31#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/partOfSpark/kafkaCunsumer.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -1078,8 +1044,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        <state relative-caret-position="456">
+          <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/partOfSpark/DBUtil.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+          <folding>
+            <element signature="e#31#74#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1087,7 +1063,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="624">
-            <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+            <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
           </first_editor>
           <second_editor />
         </state>
@@ -1095,25 +1071,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/kafkaProducerUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="201">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
           <folding>
             <element signature="e#30#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/LiePinCrawer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="12" />
+          <folding>
+            <element signature="e#31#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/mainCrawer/FiveOneCrawer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-393">
-          <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+        <state relative-caret-position="-504">
+          <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+          <folding>
+            <element signature="e#31#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/akkaCrawer/partOfSpark/SparkDemo.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
-          <caret line="50" column="10" lean-forward="true" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+          <caret line="55" column="43" lean-forward="true" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
           <folding>
             <element signature="e#34#89#0" expanded="true" />
           </folding>

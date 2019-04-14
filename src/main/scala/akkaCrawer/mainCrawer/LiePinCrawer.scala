@@ -28,6 +28,12 @@ object LiePinCrawer{
     "上海" -> "020",
     "广州" -> "050020",
     "深圳" -> "050090")
+  val jobCityToPinYin =Map(
+    "北京" -> "Beijing",
+    "上海" -> "Shanghai",
+    "广州" -> "Guangzhou",
+    "深圳" -> "Shenzhen"
+  )
   /**
     * @Description 用于解析Document，其map的数据格式为（工作名称，工作地点，公司名称，薪资，详情链接，发布时间）
     * @param doc 解析网页的Document
@@ -134,7 +140,7 @@ object LiePinCrawer{
       val threadNum = 1
       val t1 = System.currentTimeMillis
       val jobMap = concurrentCrawler(URL, jobTag, jobCityNumber, page, threadNum, new ConcurrentHashMap[String, String]())
-      kafkaProducerUtils.kafkaUploadData(jobTag,jobMap)
+      kafkaProducerUtils.kafkaUploadData(jobCityToPinYin(jobCity),jobMap)
       val t2 = System.currentTimeMillis
       println(s"抓取数：$sum  重试数：$fail  耗时(秒)：" + (t2 - t1) / 1000)
     }else{
@@ -143,6 +149,6 @@ object LiePinCrawer{
   }
 //测试
   def main(args: Array[String]): Unit = {
-    startCrawler("java", "北京", 0)
+    startCrawler("java", "广州", 0)
   }
 }

@@ -33,7 +33,7 @@ object SparkDemo {
     )
 
     /**配置多个 */
-    val topics = Array("java")
+    val topics = Array("Beijing")
 
     /** 读取所有的partition数据 */
     val stream2: InputDStream[ConsumerRecord[String, String]] = KafkaUtils.createDirectStream[String, String](
@@ -46,7 +46,15 @@ object SparkDemo {
       if (!lineRDD.isEmpty()) {
         lineRDD.foreachPartition(iter => {
           iter.foreach(record => {
-            println("partition = " + record.partition() ," key = " + record.key(), " value = " + record.value(), " offset = " + record.offset())
+            //println("partition = " + record.partition() ," key = " + record.key(), " value = " + record.value(), " offset = " + record.offset())
+            val jobInfoSplited: Array[String] = record.value().split(",")
+            val jobName = jobInfoSplited(0)
+            val jobLocation = jobInfoSplited(1)
+            val companyName = jobInfoSplited(2)
+            val jobSalary = jobInfoSplited(3)
+            val jobLink = jobInfoSplited(4)
+            val jobDate = jobInfoSplited(5)
+            println("工作名称：" + jobName +"工作地点："+ jobLocation + "公司名称："  + companyName + "薪资："+ jobSalary + "详情链接："+ jobLink +"日期："+ jobDate)
           })
         })
 

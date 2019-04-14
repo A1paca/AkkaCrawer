@@ -27,6 +27,12 @@ object FiveOneCrawer{
     "上海" -> "0200",
     "广州" -> "0302",
     "深圳" -> "0400")
+  val jobCityToPinYin =Map(
+    "北京" -> "Beijing",
+    "上海" -> "Shanghai",
+    "广州" -> "Guangzhou",
+    "深圳" -> "Shenzhen"
+  )
   /**
     * @Description 用于解析Document，其map的数据格式为（工作名称，工作地点，公司名称，薪资，详情链接，发布时间）
     * @param doc 解析网页的Document
@@ -44,7 +50,7 @@ object FiveOneCrawer{
          elem.select("span.t2").select("a").attr("title")+","+
          elem.select("span.t4").html +","+
          elem.select("p").select("span").select("a").attr("href")+","+
-         elem.select("span.t5").html
+         dateSplit(elem.select("span.t5").html)
        )
      }
       count += 1
@@ -52,6 +58,16 @@ object FiveOneCrawer{
     count
   }
 
+  /**
+    * 用于格式化日期
+    * @param fiveoneJob
+    * @return 返回格式化后的日期
+    */
+  def dateSplit(fiveoneJob: String ): String ={
+      val jobDateSplited: Array[String] = fiveoneJob.substring(0, fiveoneJob.length).split("-",2)
+      val jobDate = "2019年"+jobDateSplited(0)+ "月" + jobDateSplited(1) + "日"
+      jobDate
+  }
   //用于记录总数，和失败次数
   val sum, fail: AtomicInteger = new AtomicInteger(0)
   /**
@@ -120,7 +136,7 @@ object FiveOneCrawer{
       val threadNum = 1
       val t1 = System.currentTimeMillis
       val jobMap = concurrentCrawler(URL, jobTag, jobCityNumber, page, threadNum, new ConcurrentHashMap[String, String]())
-      kafkaProducerUtils.kafkaUploadData(jobTag,jobMap)
+      kafkaProducerUtils.kafkaUploadData(jobCityToPinYin(jobCity),jobMap)
       val t2 = System.currentTimeMillis
       println(s"抓取数：$sum  重试数：$fail  耗时(秒)：" + (t2 - t1) / 1000)
     }else{
