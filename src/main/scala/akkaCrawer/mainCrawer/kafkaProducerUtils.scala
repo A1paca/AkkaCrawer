@@ -33,4 +33,6 @@ object kafkaProducerUtils {
     producer.close
     println("数据生产完毕")
   }
+
+
 }

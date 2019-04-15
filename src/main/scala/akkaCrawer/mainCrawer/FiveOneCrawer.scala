@@ -45,11 +45,11 @@ object FiveOneCrawer{
      if(elem.select("p").select("span").select("a").attr("title").length != 0){
        job.put(elem.select("span.t2").select("a").attr("title") + ":"
          + elem.select("p").select("span").select("a").attr("title"),
-         elem.select("p").select("span").select("a").attr("title")+","+
-         elem.select("span.t3").html +","+
-         elem.select("span.t2").select("a").attr("title")+","+
-         elem.select("span.t4").html +","+
-         elem.select("p").select("span").select("a").attr("href")+","+
+         elem.select("p").select("span").select("a").attr("title")+";"+
+         elem.select("span.t3").html +";"+
+         elem.select("span.t2").select("a").attr("title")+";"+
+         elem.select("span.t4").html +";"+
+         elem.select("p").select("span").select("a").attr("href")+";"+
          dateSplit(elem.select("span.t5").html)
        )
      }
@@ -146,5 +146,8 @@ object FiveOneCrawer{
   //测试
   def main(args: Array[String]): Unit = {
     startCrawler("java", "广州", 1)
+    startCrawler("java", "深圳", 1)
+    startCrawler("java", "北京", 1)
+    startCrawler("java", "上海", 1)
   }
 }

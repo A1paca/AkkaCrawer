@@ -45,12 +45,12 @@ object LiePinCrawer{
     for (elem <- doc.select("div.sojob-item-main")) {
       job.put(elem.select("p.company-name").select("a").html + ":"
         +elem.select("div.job-info").select("h3").select("a").html ,
-        elem.select("div.job-info").select("h3").select("a").html + ","
+        elem.select("div.job-info").select("h3").select("a").html + ";"
         + elem.select("div.job-info").select("span.area").html
-        + elem.select("div.job-info").select("a.area").html+ ","
-        + elem.select("p.company-name").select("a").html + ","
-        + salarySplit(elem.select("div.job-info").select("span.text-warning").html )+ ","
-        + elem.select("div.job-info").select("a").attr("href")+","+
+        + elem.select("div.job-info").select("a.area").html+ ";"
+        + elem.select("p.company-name").select("a").html + ";"
+        + salarySplit(elem.select("div.job-info").select("span.text-warning").html )+ ";"
+        + elem.select("div.job-info").select("a").attr("href")+";"+
         elem.select("p.time-info").select("time").attr("title")
       )
       count += 1
@@ -149,6 +149,9 @@ object LiePinCrawer{
   }
 //测试
   def main(args: Array[String]): Unit = {
-    startCrawler("java", "广州", 0)
+    startCrawler("java", "广州", 1)
+    startCrawler("java", "深圳", 1)
+    startCrawler("java", "北京", 1)
+    startCrawler("java", "上海", 1)
   }
 }
