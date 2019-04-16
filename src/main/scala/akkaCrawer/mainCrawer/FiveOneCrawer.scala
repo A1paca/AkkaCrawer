@@ -48,7 +48,7 @@ object FiveOneCrawer{
          elem.select("p").select("span").select("a").attr("title")+";"+
          elem.select("span.t3").html +";"+
          elem.select("span.t2").select("a").attr("title")+";"+
-         elem.select("span.t4").html +";"+
+         salarySplit(elem.select("span.t4").html) +";"+
          elem.select("p").select("span").select("a").attr("href")+";"+
          dateSplit(elem.select("span.t5").html)
        )
@@ -68,6 +68,39 @@ object FiveOneCrawer{
       val jobDate = "2019年"+jobDateSplited(0)+ "月" + jobDateSplited(1) + "日"
       jobDate
   }
+  /**
+    * 用于格式化爬取薪资的数据
+    * @param fiveOneJob 爬取的猎聘薪资
+    * @return 格式化后的薪资
+    */
+  def salarySplit(fiveOneJob: String ): String = {
+    if (fiveOneJob.endsWith("千/年")) {
+      val jobSalarySplited: Array[String] = fiveOneJob.substring(0, fiveOneJob.length - 3).split("-", 2)
+      val salaryLower = jobSalarySplited(0).toDouble / 10 / 12
+      val salaryUpper = jobSalarySplited(1).toDouble / 10 / 12
+      val jobSalary = salaryLower.formatted("%.1f") + "-" + salaryUpper.formatted("%.1f") + "万/月"
+      jobSalary
+    } else if (fiveOneJob.endsWith("万/年")) {
+      val jobSalarySplited: Array[String] = fiveOneJob.substring(0, fiveOneJob.length - 3).split("-", 2)
+      val salaryLower = jobSalarySplited(0).toDouble / 12
+      val salaryUpper = jobSalarySplited(1).toDouble / 12
+      val jobSalary = salaryLower.formatted("%.1f") + "-" + salaryUpper.formatted("%.1f") + "万/月"
+      jobSalary
+    } else if (fiveOneJob.endsWith("元/天")) {
+      val jobSalarySplited: Array[String] = fiveOneJob.substring(0, fiveOneJob.length - 3).split("-", 2)
+      val salaryLower = jobSalarySplited(0).toDouble / 10000 * 365
+      val salaryUpper = jobSalarySplited(1).toDouble / 10000 * 365
+      val jobSalary = salaryLower.formatted("%.1f") + "-" + salaryUpper.formatted("%.1f") + "万/月"
+      jobSalary
+    } else if (fiveOneJob.endsWith("千/月")) {
+      val jobSalarySplited: Array[String] = fiveOneJob.substring(0, fiveOneJob.length - 3).split("-", 2)
+      val salaryLower = jobSalarySplited(0).toDouble / 10
+      val salaryUpper = jobSalarySplited(1).toDouble / 10
+      val jobSalary = salaryLower.formatted("%.1f") + "-" + salaryUpper.formatted("%.1f") + "万/月"
+      jobSalary
+    } else fiveOneJob
+  }
+
   //用于记录总数，和失败次数
   val sum, fail: AtomicInteger = new AtomicInteger(0)
   /**
@@ -136,7 +169,7 @@ object FiveOneCrawer{
       val threadNum = 1
       val t1 = System.currentTimeMillis
       val jobMap = concurrentCrawler(URL, jobTag, jobCityNumber, page, threadNum, new ConcurrentHashMap[String, String]())
-      kafkaProducerUtils.kafkaUploadData(jobCityToPinYin(jobCity),jobMap)
+      AkkaToKafkaProducer.kafkaUploadData(jobCityToPinYin(jobCity),jobMap)
       val t2 = System.currentTimeMillis
       println(s"抓取数：$sum  重试数：$fail  耗时(秒)：" + (t2 - t1) / 1000)
     }else{

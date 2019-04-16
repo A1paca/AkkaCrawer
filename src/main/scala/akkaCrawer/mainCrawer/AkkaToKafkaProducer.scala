@@ -7,7 +7,7 @@ import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, Produce
 import org.apache.kafka.common.serialization.StringSerializer
 import org.apache.log4j.BasicConfigurator
 
-object kafkaProducerUtils {
+object AkkaToKafkaProducer {
   /**
     * 此方法用于将Akka作为生产者上传数据
     * @param topic:topic名称
@@ -33,6 +33,4 @@ object kafkaProducerUtils {
     producer.close
     println("数据生产完毕")
   }
-
-
 }
